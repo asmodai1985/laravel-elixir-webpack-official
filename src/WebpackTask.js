@@ -40,7 +40,7 @@ class WebpackTask extends Elixir.Task {
             .src(this.src.path)
             .pipe(this.webpack())
             .on('error', this.onError())
-            .pipe(this.minify())
+            // .pipe(this.minify())
             .on('error', this.onError())
             .pipe(this.saveAs(gulp))
             .pipe(this.onSuccess())

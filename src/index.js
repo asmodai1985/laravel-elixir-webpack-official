@@ -1,6 +1,6 @@
 import { mergeWith, isArray } from 'lodash';
 import WebpackTask from './WebpackTask';
-
+const webpack = require('webpack');
 /*
  |----------------------------------------------------------------
  | Webpack
@@ -26,7 +26,18 @@ Elixir.webpack = {
         stats: {
             assets: false,
             version: false
-        }
+        },
+        plugins:[
+            new webpack.optimize.UglifyJsPlugin({
+                compress: {
+                    //warnings: false,
+                    drop_console: Elixir.inProduction
+                },
+                //output: {
+                //    comments: false,
+                //},
+            }),
+        ]
     },
 
     mergeConfig(newConfig) {
