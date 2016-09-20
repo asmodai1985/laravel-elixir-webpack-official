@@ -53,7 +53,7 @@ if (Elixir.inProduction) {
             drop_console: Elixir.inProduction
         }
     }));
-};
+}
 
 Elixir.extend('webpack', function (scripts, output, baseDir, options) {
     new _WebpackTask2.default('webpack', getPaths(scripts, baseDir, output), options);
