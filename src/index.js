@@ -48,7 +48,7 @@ if (Elixir.inProduction) {
         //    comments: false,
         //},
     }));
-};
+}
 
 Elixir.extend('webpack', function(scripts, output, baseDir, options) {
     new WebpackTask(
