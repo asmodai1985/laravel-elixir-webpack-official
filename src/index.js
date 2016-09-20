@@ -27,17 +27,7 @@ Elixir.webpack = {
             assets: false,
             version: false
         },
-        plugins:[
-            new webpack.optimize.UglifyJsPlugin({
-                compress: {
-                    //warnings: false,
-                    drop_console: Elixir.inProduction
-                },
-                //output: {
-                //    comments: false,
-                //},
-            }),
-        ]
+        plugins:[]
     },
 
     mergeConfig(newConfig) {
@@ -48,7 +38,17 @@ Elixir.webpack = {
         });
     }
 };
-
+if (Elixir.inProduction) {
+    Elixir.webpack.plugins.push(new webpack.optimize.UglifyJsPlugin({
+        compress: {
+            //warnings: false,
+            drop_console: Elixir.inProduction
+        },
+        //output: {
+        //    comments: false,
+        //},
+    }));
+};
 
 Elixir.extend('webpack', function(scripts, output, baseDir, options) {
     new WebpackTask(
