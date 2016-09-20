@@ -39,9 +39,9 @@ Elixir.webpack = {
     }
 };
 if (Elixir.inProduction) {
-    Elixir.webpack.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    Elixir.webpack.config.plugins.push(new webpack.optimize.UglifyJsPlugin({
         compress: {
-            //warnings: false,
+            warnings: false,
             drop_console: Elixir.inProduction
         },
         //output: {
