@@ -1,11 +1,11 @@
 {
   "name": "laravel-elixir-webpack-official",
-  "version": "1.0.5",
+  "version": "1.0.9",
   "description": "Laravel Elixir Webpack integration",
   "main": "dist/index.js",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/JeffreyWay/laravel-elixir-webpack-official.git"
+    "type": "git",
+    "url": "https://github.com/JeffreyWay/laravel-elixir-webpack-official.git"
   },
   "homepage": "https://github.com/JeffreyWay/laravel-elixir-webpack-official",
   "scripts": {
@@ -24,8 +24,8 @@
     "buble": "^0.12.3",
     "buble-loader": "^0.2.2",
     "lodash": "^4.15.0",
-    "webpack": "^2.1.0-beta.15",
-    "webpack-stream": "^3.2.0"
+    "webpack": "2.1.0-beta.15 - 2.1.0-beta.22",
+    "webpack-stream": "github:jeroennoten/webpack-stream#patch-1"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
