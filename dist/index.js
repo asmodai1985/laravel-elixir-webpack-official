@@ -28,7 +28,7 @@ Elixir.webpack = {
             aggregateTimeout: 500,
             ignored: /node_modules/
         },
-        devtool: Elixir.config.sourcemaps ? 'eval-cheap-module-source-map' : '',
+        devtool: Elixir.config.sourcemaps ? 'source-map' : '',
         module: {
             loaders: [{ test: /\.js$/, loader: 'buble', exclude: /node_modules/ }]
         },
